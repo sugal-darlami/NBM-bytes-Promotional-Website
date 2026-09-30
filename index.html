@@ -1,0 +1,1308 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO Meta Tags -->
+    <title>NBM BYTES — Building Digital Solutions for a Smarter Future</title>
+    <meta name="description"
+        content="NBM BYTES delivers reliable software, web, mobile, and digital solutions that help businesses grow and operate smarter. Based in Janakinagar - Butwal, Rupandehi, Nepal.">
+    <meta name="keywords"
+        content="NBM BYTES, Software Development Nepal, Web Development, Mobile App Development, Custom ERP, Butwal Tech Company, Rupandehi, Anish Neupane, Sugal Darlami, Sornim Narayan Shrestha, Sudeep Tiwari">
+    <meta name="author" content="NBM BYTES">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://nbmbytes.com/">
+    <meta property="og:title" content="NBM BYTES — Building Digital Solutions for a Smarter Future">
+    <meta property="og:description"
+        content="NBM BYTES delivers reliable software, web, mobile and digital solutions that help businesses grow and operate smarter.">
+    <meta property="og:image" content="assets/project-erp.jpg">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="NBM BYTES — Building Digital Solutions for a Smarter Future">
+    <meta name="twitter:description"
+        content="NBM BYTES delivers reliable software, web, mobile and digital solutions that help businesses grow and operate smarter.">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/logo-icon.svg">
+
+    <!-- Google Fonts: Plus Jakarta Sans & Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Structured Data JSON-LD -->
+    <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "NBM BYTES",
+    "url": "https://nbmbytes.com",
+    "logo": "https://nbmbytes.com/assets/logo.svg",
+    "description": "NBM BYTES delivers reliable software, web, mobile and digital solutions that help businesses grow and operate smarter.",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Janakinagar",
+      "addressLocality": "Butwal",
+      "addressRegion": "Rupandehi",
+      "addressCountry": "NP"
+    },
+    "founders": [
+      { "@type": "Person", "name": "Anish Neupane" },
+      { "@type": "Person", "name": "Sugal Darlami" },
+      { "@type": "Person", "name": "Sornim Narayan Shrestha" },
+      { "@type": "Person", "name": "Sudeep Tiwari" }
+    ],
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+977-9767022003",
+      "email": "nbmbytes@gmail.com",
+      "contactType": "customer service"
+    }
+  }
+  </script>
+</head>
+
+<body>
+
+    <!-- ======================================================== -->
+    <!-- NAVIGATION BAR                                           -->
+    <!-- ======================================================== -->
+    <header class="site-header" id="navbar">
+        <div class="nav-container">
+            <!-- Logo -->
+            <a href="#home" class="brand-logo" aria-label="NBM BYTES Home">
+                <img src="assets/nbm-logo.png" alt="NBM BYTES Logo" class="brand-logo-img">
+                <span class="brand-text">
+                    <span class="brand-dark">NBM</span> <span class="brand-blue">BYTES</span>
+                </span>
+            </a>
+
+            <!-- Desktop Nav Links -->
+            <nav class="nav-links" id="navMenu" aria-label="Main Navigation">
+                <a href="#home" class="nav-link active" data-section="home">Home</a>
+                <a href="#services" class="nav-link" data-section="services">Services</a>
+                <a href="#about" class="nav-link" data-section="about">About</a>
+                <a href="#projects" class="nav-link" data-section="projects">Projects</a>
+                <a href="#contact" class="nav-link" data-section="contact">Contact</a>
+            </nav>
+
+            <!-- Right Header Actions -->
+            <div class="nav-actions">
+                <button type="button" class="btn-signin" id="btnSignIn">Sign In</button>
+                <button type="button" class="btn-create-account" id="btnCreateAccount">Create Account</button>
+                <!-- Mobile Menu Toggle Button -->
+                <button class="mobile-toggle" id="mobileMenuBtn" aria-label="Toggle navigation menu"
+                    aria-expanded="false">
+                    <span class="hamburger-bar"></span>
+                    <span class="hamburger-bar"></span>
+                    <span class="hamburger-bar"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Drawer Menu -->
+    <div class="mobile-drawer" id="mobileDrawer">
+        <nav class="mobile-nav-links">
+            <a href="#home" class="mobile-nav-link active">Home</a>
+            <a href="#services" class="mobile-nav-link">Services</a>
+            <a href="#about" class="mobile-nav-link">About</a>
+            <a href="#team" class="mobile-nav-link">Team</a>
+            <a href="#projects" class="mobile-nav-link">Projects</a>
+            <a href="#contact" class="mobile-nav-link">Contact</a>
+        </nav>
+        <div class="mobile-drawer-footer">
+            <button class="btn-signin mobile-btn" id="mobileSignIn">Sign In</button>
+            <button class="btn-create-account mobile-btn" id="mobileCreateAccount">Create Account</button>
+        </div>
+    </div>
+
+    <main>
+        <!-- ======================================================== -->
+        <!-- HERO SECTION                                             -->
+        <!-- ======================================================== -->
+        <section class="hero-section" id="home">
+            <div class="hero-background-glow"></div>
+            <div class="section-container hero-grid">
+
+                <!-- Left Hero Content -->
+                <div class="hero-content">
+                    <div class="hero-badge">
+                        <span class="badge-dot"></span>
+                        SOFTWARE &amp; TECHNOLOGY SOLUTIONS
+                    </div>
+
+                    <h1 class="hero-title">
+                        Building Digital<br>
+                        Solutions for a<br>
+                        <span class="highlight-blue">Smarter Future</span>
+                    </h1>
+
+                    <p class="hero-subtitle">
+                        NBM BYTES delivers reliable software, web, mobile and digital solutions that help businesses
+                        grow and
+                        operate smarter.
+                    </p>
+
+                    <div class="hero-cta-group">
+                        <a href="#contact" class="btn-primary hero-btn-primary" id="heroGetStartedBtn">Get Started</a>
+                        <a href="#services" class="btn-secondary hero-btn-secondary" id="heroExploreServicesBtn">
+                            Explore Our Services
+                            <svg class="chevron-icon" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <path d="M6 12L10 8L6 4" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </a>
+                    </div>
+
+                    <!-- Hero Bottom Stats -->
+                    <div class="hero-stats-row">
+                        <div class="hero-stat-item">
+                            <span class="stat-number" data-target="50">50+</span>
+                            <span class="stat-label">Projects</span>
+                        </div>
+                        <div class="hero-stat-item">
+                            <span class="stat-number" data-target="30">30+</span>
+                            <span class="stat-label">Clients</span>
+                        </div>
+                        <div class="hero-stat-item">
+                            <span class="stat-number" data-target="5">5+</span>
+                            <span class="stat-label">Years</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Hero Dashboard Mockup -->
+                <div class="hero-visual">
+                    <div class="app-window-card" id="dashboardPreview">
+                        <!-- Window Topbar -->
+                        <div class="window-header">
+                            <div class="window-controls">
+                                <span class="dot dot-red" title="Close"></span>
+                                <span class="dot dot-yellow" title="Minimize"></span>
+                                <span class="dot dot-green" title="Expand"></span>
+                            </div>
+                            <div class="window-url-bar">
+                                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" class="url-lock-icon">
+                                    <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                                    <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                                </svg>
+                                <span>app.nbmbytes.com/dashboard</span>
+                            </div>
+                            <div class="window-spacer"></div>
+                        </div>
+
+                        <!-- Dashboard Content Inside Mockup -->
+                        <div class="dashboard-body">
+
+                            <!-- 3 Top Metric Mini-Cards -->
+                            <div class="dashboard-kpi-grid">
+                                <div class="kpi-card kpi-blue">
+                                    <span class="kpi-title">Total Projects</span>
+                                    <div class="kpi-value-row">
+                                        <span class="kpi-number counter" data-count="24">24</span>
+                                        <span class="kpi-badge badge-blue">+12%</span>
+                                    </div>
+                                </div>
+
+                                <div class="kpi-card kpi-green">
+                                    <span class="kpi-title">Active Clients</span>
+                                    <div class="kpi-value-row">
+                                        <span class="kpi-number counter" data-count="18">18</span>
+                                        <span class="kpi-badge badge-green">+5%</span>
+                                    </div>
+                                </div>
+
+                                <div class="kpi-card kpi-purple">
+                                    <span class="kpi-title">Revenue</span>
+                                    <div class="kpi-value-row">
+                                        <span class="kpi-number"><span class="kpi-currency">$</span><span
+                                                class="counter" data-count="84">84</span>K</span>
+                                        <span class="kpi-badge badge-purple">+23%</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Project Progress Card -->
+                            <div class="dashboard-card project-progress-card">
+                                <div class="card-header-clean">
+                                    <h4 class="card-heading">Project Progress</h4>
+                                </div>
+
+                                <div class="progress-list">
+                                    <div class="progress-item">
+                                        <div class="progress-meta">
+                                            <span class="progress-name">E-Commerce Platform</span>
+                                            <span class="progress-val">85%</span>
+                                        </div>
+                                        <div class="progress-track">
+                                            <div class="progress-fill fill-blue" style="--target-width: 85%;"></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="progress-item">
+                                        <div class="progress-meta">
+                                            <span class="progress-name">Mobile Banking App</span>
+                                            <span class="progress-val">60%</span>
+                                        </div>
+                                        <div class="progress-track">
+                                            <div class="progress-fill fill-purple" style="--target-width: 60%;"></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="progress-item">
+                                        <div class="progress-meta">
+                                            <span class="progress-name">AI Assistant</span>
+                                            <span class="progress-val">45%</span>
+                                        </div>
+                                        <div class="progress-track">
+                                            <div class="progress-fill fill-teal" style="--target-width: 45%;"></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="progress-item">
+                                        <div class="progress-meta">
+                                            <span class="progress-name">Business Management</span>
+                                            <span class="progress-val">92%</span>
+                                        </div>
+                                        <div class="progress-track">
+                                            <div class="progress-fill fill-orange" style="--target-width: 92%;"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Recent Activity Card -->
+                            <div class="dashboard-card recent-activity-card">
+                                <div class="card-header-clean">
+                                    <h4 class="card-heading">Recent Activity</h4>
+                                </div>
+                                <div class="activity-list">
+                                    <div class="activity-item">
+                                        <div class="activity-left">
+                                            <span class="activity-dot dot-blue"></span>
+                                            <span class="activity-text">New project proposal submitted</span>
+                                        </div>
+                                        <span class="activity-time">2m ago</span>
+                                    </div>
+
+                                    <div class="activity-item">
+                                        <div class="activity-left">
+                                            <span class="activity-dot dot-green"></span>
+                                            <span class="activity-text">Client review completed</span>
+                                        </div>
+                                        <span class="activity-time">1h ago</span>
+                                    </div>
+
+                                    <div class="activity-item">
+                                        <div class="activity-left">
+                                            <span class="activity-dot dot-purple"></span>
+                                            <span class="activity-text">Sprint 4 deployment done</span>
+                                        </div>
+                                        <span class="activity-time">3h ago</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ======================================================== -->
+        <!-- SERVICES SECTION                                         -->
+        <!-- ======================================================== -->
+        <section class="services-section" id="services">
+            <div class="section-container">
+                <!-- Section Header -->
+                <div class="section-header text-center">
+                    <span class="section-label">WHAT WE OFFER</span>
+                    <h2 class="section-title">Our Services</h2>
+                    <p class="section-subtitle">
+                        Technology solutions designed to help businesses grow, improve efficiency and create better
+                        digital
+                        experiences.
+                    </p>
+                </div>
+
+                <!-- 3 Service Cards Grid -->
+                <div class="services-grid">
+
+                    <!-- Card 1: Web Development -->
+                    <article class="service-card" id="serviceWeb">
+                        <div class="service-icon-box icon-box-blue">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#2563eb"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                                <line x1="8" y1="21" x2="16" y2="21"></line>
+                                <line x1="12" y1="17" x2="12" y2="21"></line>
+                            </svg>
+                        </div>
+
+                        <h3 class="service-title">Web Development</h3>
+                        <p class="service-description">
+                            We design and develop high-performance, responsive websites and web applications tailored to
+                            your business
+                            needs. From corporate websites to complex web platforms, we deliver solutions built for
+                            scale.
+                        </p>
+
+                        <ul class="service-features">
+                            <li>
+                                <span class="check-icon">✓</span>
+                                <span>Responsive design for all screen sizes</span>
+                            </li>
+                            <li>
+                                <span class="check-icon">✓</span>
+                                <span>Modern frontend frameworks (React, Next.js, Vue)</span>
+                            </li>
+                            <li>
+                                <span class="check-icon">✓</span>
+                                <span>Backend API development and integration</span>
+                            </li>
+                            <li>
+                                <span class="check-icon">✓</span>
+                                <span>CMS implementation and customization</span>
+                            </li>
+                            <li>
+                                <span class="check-icon">✓</span>
+                                <span>Performance optimization and SEO-ready architecture</span>
+                            </li>
+                            <li>
+                                <span class="check-icon">✓</span>
+                                <span>Ongoing maintenance and support</span>
+                            </li>
+                        </ul>
+
+                        <div class="service-footer">
+                            <a href="#contact" class="btn-service-dark" data-service="Web Development">Get Started</a>
+                        </div>
+                    </article>
+
+                    <!-- Card 2: Mobile App Development -->
+                    <article class="service-card" id="serviceMobile">
+                        <div class="service-icon-box icon-box-purple">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#9333ea"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
+                                <line x1="12" y1="18" x2="12.01" y2="18"></line>
+                            </svg>
+                        </div>
+
+                        <h3 class="service-title">Mobile App Development</h3>
+                        <p class="service-description">
+                            We build native and cross-platform mobile applications that provide smooth, intuitive
+                            experiences on iOS
+                            and Android. Our apps are designed with performance, usability, and scalability in mind.
+                        </p>
+
+                        <ul class="service-features">
+                            <li>
+                                <span class="check-icon">✓</span>
+                                <span>Cross-platform development with React Native</span>
+                            </li>
+                            <li>
+                                <span class="check-icon">✓</span>
+                                <span>Native iOS (Swift) and Android (Kotlin) development</span>
+                            </li>
+                            <li>
+                                <span class="check-icon">✓</span>
+                                <span>Offline-first architecture and caching strategies</span>
+                            </li>
+                            <li>
+                                <span class="check-icon">✓</span>
+                                <span>Push notification and real-time data integration</span>
+                            </li>
+                            <li>
+                                <span class="check-icon">✓</span>
+                                <span>App Store and Google Play deployment</span>
+                            </li>
+                            <li>
+                                <span class="check-icon">✓</span>
+                                <span>Post-launch updates and feature iteration</span>
+                            </li>
+                        </ul>
+
+                        <div class="service-footer">
+                            <a href="#contact" class="btn-service-dark" data-service="Mobile App Development">Get
+                                Started</a>
+                        </div>
+                    </article>
+
+                    <!-- Card 3: Custom Software Development -->
+                    <article class="service-card card-accent-green" id="serviceSoftware">
+                        <div class="service-icon-box icon-box-green">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#059669"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="16 18 22 12 16 6"></polyline>
+                                <polyline points="8 6 2 12 8 18"></polyline>
+                            </svg>
+                        </div>
+
+                        <h3 class="service-title">Custom Software Development</h3>
+                        <p class="service-description">
+                            We engineer bespoke software solutions that automate workflows, integrate systems, and
+                            address the
+                            specific challenges unique to your business — from MVPs to enterprise platforms.
+                        </p>
+
+                        <ul class="service-features">
+                            <li>
+                                <span class="check-icon">✓</span>
+                                <span>Business process analysis and requirements gathering</span>
+                            </li>
+                            <li>
+                                <span class="check-icon">✓</span>
+                                <span>Scalable system architecture design</span>
+                            </li>
+                            <li>
+                                <span class="check-icon">✓</span>
+                                <span>ERP, CRM, and business management systems</span>
+                            </li>
+                            <li>
+                                <span class="check-icon">✓</span>
+                                <span>Third-party API and database integrations</span>
+                            </li>
+                            <li>
+                                <span class="check-icon">✓</span>
+                                <span>Quality assurance and automated testing</span>
+                            </li>
+                            <li>
+                                <span class="check-icon">✓</span>
+                                <span>Documentation and team training</span>
+                            </li>
+                        </ul>
+
+                        <div class="service-footer">
+                            <a href="#contact" class="btn-service-dark" data-service="Custom Software Development">Get
+                                Started</a>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ======================================================== -->
+        <!-- ABOUT SECTION (Dark Banner & Mission/Vision)             -->
+        <!-- ======================================================== -->
+        <section class="about-section" id="about">
+
+            <!-- Top Dark Themed Hero Banner -->
+            <div class="about-dark-hero">
+                <div class="about-bg-elements">
+                    <div class="glow-orb orb-1"></div>
+                    <div class="glow-orb orb-2"></div>
+                </div>
+
+                <div class="section-container about-hero-grid">
+
+                    <!-- Left Text Content -->
+                    <div class="about-intro-col">
+                        <span class="about-cyan-label">WHO WE ARE</span>
+                        <h2 class="about-heading">
+                            About <span class="text-cyan">NBM BYTES</span>
+                        </h2>
+
+                        <p class="about-text-lead">
+                            NBM BYTES is a software and technology company providing end-to-end digital solutions for
+                            businesses of
+                            all sizes. Founded with a commitment to quality and innovation, we have grown into a trusted
+                            technology
+                            partner for startups, SMEs, and enterprises across Nepal and beyond.
+                        </p>
+
+                        <p class="about-text-secondary">
+                            From custom software development to mobile apps, UI/UX design to cloud solutions — we bring
+                            technical
+                            depth and strategic thinking to every engagement.
+                        </p>
+                    </div>
+
+                    <!-- Right 2x2 Stats Grid -->
+                    <div class="about-stats-grid">
+
+                        <div class="about-stat-card">
+                            <span class="stat-big-cyan">50+</span>
+                            <span class="stat-card-label">Projects Delivered</span>
+                        </div>
+
+                        <div class="about-stat-card">
+                            <span class="stat-big-cyan">30+</span>
+                            <span class="stat-card-label">Happy Clients</span>
+                        </div>
+
+                        <div class="about-stat-card">
+                            <span class="stat-big-cyan">15+</span>
+                            <span class="stat-card-label">Technologies</span>
+                        </div>
+
+                        <div class="about-stat-card">
+                            <span class="stat-big-cyan">5+</span>
+                            <span class="stat-card-label">Years Experience</span>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Bottom Mission & Vision Cards -->
+            <div class="mission-vision-wrapper">
+                <div class="section-container mission-vision-grid">
+
+                    <!-- Mission Card (Light) -->
+                    <div class="mv-card mv-card-light">
+                        <div class="mv-icon-badge">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white"
+                                stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                            </svg>
+                        </div>
+                        <h3 class="mv-title">Our Mission</h3>
+                        <p class="mv-text">
+                            Our mission is to create reliable, innovative and user-focused digital solutions that solve
+                            real-world
+                            business problems — delivering meaningful value to every client we partner with.
+                        </p>
+                    </div>
+
+                    <!-- Vision Card (Dark Navy) -->
+                    <div class="mv-card mv-card-dark">
+                        <div class="mv-icon-badge badge-vision">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white"
+                                stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                                <circle cx="12" cy="12" r="3"></circle>
+                            </svg>
+                        </div>
+                        <h3 class="mv-title text-white">Our Vision</h3>
+                        <p class="mv-text text-gray">
+                            To become a trusted technology partner for businesses building their digital future — known
+                            for
+                            excellence, integrity, and a genuine commitment to client success.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+
+        </section>
+
+        <!-- ======================================================== -->
+        <!-- TEAM SECTION (Anish, Sugal, Sornim, Sudeep)              -->
+        <!-- ======================================================== -->
+        <section class="team-section" id="team">
+            <div class="section-container">
+
+                <div class="section-header text-center">
+                    <span class="section-label">LEADERSHIP &amp; TALENT</span>
+                    <h2 class="section-title">Meet Our Team</h2>
+                    <p class="section-subtitle">
+                        The skilled engineering minds, product architects, and technology innovators steering NBM BYTES
+                        forward.
+                    </p>
+                </div>
+
+                <div class="team-grid">
+
+                    <!-- Team Member 1: Anish Neupane -->
+                    <article class="team-card">
+                        <div class="team-photo-wrap">
+                            <img src="assets/anish.jpeg"
+                                alt="Anish Neupane - Co-Founder & Lead Software Architect at NBM BYTES" loading="lazy"
+                                class="team-avatar">
+                            <div class="team-badge-corner">Lead</div>
+                        </div>
+                        <div class="team-info">
+                            <h3 class="team-name">Anish Neupane</h3>
+                            <p class="team-role">Project Manaager of NBM Bytes</p>
+                            <p class="team-bio">
+                                Leading project delivery, team coordination, strategic planning, and innovative digital
+                                solutions with
+                                professional excellence.
+                            </p>
+                            <div class="team-tags">
+                                <span>Architecture</span>
+                                <span>Node.js</span>
+                                <span>Cloud</span>
+                            </div>
+                            <div class="team-socials">
+                                <a href="https://linkedin.com" target="_blank" rel="noopener"
+                                    aria-label="Anish Neupane LinkedIn" class="social-icon">
+                                    <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24">
+                                        <path
+                                            d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 8.76a1.64 1.64 0 1 0 0-3.28 1.64 1.64 0 0 0 0 3.28m1.4 9.74v-8.37H5.06v8.37h2.8z" />
+                                    </svg>
+                                </a>
+                                <a href="https://github.com" target="_blank" rel="noopener"
+                                    aria-label="Anish Neupane GitHub" class="social-icon">
+                                    <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24">
+                                        <path
+                                            d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Team Member 2: Sugal Darlami -->
+                    <article class="team-card">
+                        <div class="team-photo-wrap">
+                            <img src="assets/Sugal.jpeg"
+                                alt="Sugal Darlami - Co-Founder & Head of Product Engineering at NBM BYTES"
+                                loading="lazy" class="team-avatar">
+                            <div class="team-badge-corner">Lead</div>
+                        </div>
+                        <div class="team-info">
+                            <h3 class="team-name">Sugal Darlami</h3>
+                            <p class="team-role">Head of UI/UX Designer and Junior Software Developer</p>
+                            <p class="team-bio">
+                                Crafting intuitive user experiences, modern interfaces, and engaging digital designs
+                                with clarity and
+                                creativity.
+                            </p>
+                            <div class="team-tags">
+                                <span>Product</span>
+                                <span>React/Next.js</span>
+                                <span>UI/UX</span>
+                            </div>
+                            <div class="team-socials">
+                                <a href="https://linkedin.com" target="_blank" rel="noopener"
+                                    aria-label="Sugal Darlami LinkedIn" class="social-icon">
+                                    <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24">
+                                        <path
+                                            d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 8.76a1.64 1.64 0 1 0 0-3.28 1.64 1.64 0 0 0 0 3.28m1.4 9.74v-8.37H5.06v8.37h2.8z" />
+                                    </svg>
+                                </a>
+                                <a href="https://github.com" target="_blank" rel="noopener"
+                                    aria-label="Sugal Darlami GitHub" class="social-icon">
+                                    <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24">
+                                        <path
+                                            d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Team Member 3: Sornim Narayan Shrestha -->
+                    <article class="team-card">
+                        <div class="team-photo-wrap">
+                            <img src="assets/sornim.jpeg"
+                                alt="Sornim - Co-Founder & Lead Software Architect at NBM BYTES" loading="lazy"
+                                class="team-avatar">
+                            <div class="team-badge-corner">Mobile</div>
+                        </div>
+                        <div class="team-info">
+                            <h3 class="team-name">Sornim Narayan Shrestha</h3>
+                            <p class="team-role">Head of Software Enginner</p>
+                            <p class="team-bio">
+                                Leading software development, technical strategy, system architecture, and engineering
+                                excellence to
+                                deliver reliable digital solutions.
+                            </p>
+                            <div class="team-tags">
+                                <span>React Native</span>
+                                <span>Mobile</span>
+                                <span>TypeScript</span>
+                            </div>
+                            <div class="team-socials">
+                                <a href="https://linkedin.com" target="_blank" rel="noopener"
+                                    aria-label="Sornim Shrestha LinkedIn" class="social-icon">
+                                    <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24">
+                                        <path
+                                            d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 8.76a1.64 1.64 0 1 0 0-3.28 1.64 1.64 0 0 0 0 3.28m1.4 9.74v-8.37H5.06v8.37h2.8z" />
+                                    </svg>
+                                </a>
+                                <a href="https://github.com" target="_blank" rel="noopener"
+                                    aria-label="Sornim Shrestha GitHub" class="social-icon">
+                                    <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24">
+                                        <path
+                                            d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Team Member 4: Sudeep Tiwari -->
+                    <article class="team-card">
+                        <div class="team-photo-wrap avatar-fallback fallback-emerald">
+                            <div class="avatar-letter-circle">
+                                <span>ST</span>
+                            </div>
+                            <div class="team-badge-corner">Cloud</div>
+                        </div>
+                        <div class="team-info">
+                            <h3 class="team-name">Sudeep Tiwari</h3>
+                            <p class="team-role">Head of Documentation</p>
+                            <p class="team-bio">
+                                Leading Documentation, technical strategy, High-level documentation, and technical
+                                presenter excellence
+                                to deliver reliable digital documentation.
+                            </p>
+                            <div class="team-tags">
+                                <span>DevOps</span>
+                                <span>AWS/GCP</span>
+                                <span>Docker</span>
+                            </div>
+                            <div class="team-socials">
+                                <a href="https://linkedin.com" target="_blank" rel="noopener"
+                                    aria-label="Sudeep Tiwari LinkedIn" class="social-icon">
+                                    <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24">
+                                        <path
+                                            d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 8.76a1.64 1.64 0 1 0 0-3.28 1.64 1.64 0 0 0 0 3.28m1.4 9.74v-8.37H5.06v8.37h2.8z" />
+                                    </svg>
+                                </a>
+                                <a href="https://github.com" target="_blank" rel="noopener"
+                                    aria-label="Sudeep Tiwari GitHub" class="social-icon">
+                                    <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24">
+                                        <path
+                                            d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ======================================================== -->
+        <!-- PROJECTS / PORTFOLIO SECTION                             -->
+        <!-- ======================================================== -->
+        <section class="projects-section" id="projects">
+            <div class="section-container">
+
+                <!-- Header -->
+                <div class="section-header text-center">
+                    <span class="section-label">PORTFOLIO</span>
+                    <h2 class="section-title">Our Projects</h2>
+                    <p class="section-subtitle">
+                        Explore some of the digital solutions created by NBM BYTES — built with precision, purpose, and
+                        a focus on
+                        results.
+                    </p>
+                </div>
+
+                <!-- Filter Tabs -->
+                <div class="project-filter-tabs" role="tablist" aria-label="Project filter categories">
+                    <button class="filter-tab active" data-filter="all" role="tab" aria-selected="true">All</button>
+                    <button class="filter-tab" data-filter="web" role="tab" aria-selected="false">Web</button>
+                    <button class="filter-tab" data-filter="mobile" role="tab" aria-selected="false">Mobile</button>
+                    <button class="filter-tab" data-filter="software" role="tab" aria-selected="false">Software</button>
+                    <button class="filter-tab" data-filter="ai" role="tab" aria-selected="false">AI</button>
+                </div>
+
+                <!-- Projects Grid -->
+                <div class="projects-grid" id="projectsGrid">
+
+                    <!-- Project 1: Business Management System (Software) -->
+                    <article class="project-card" data-category="software" data-project-id="erp">
+                        <div class="project-card-banner banner-blue">
+                            <span class="banner-pill pill-category">Software</span>
+                            <span class="banner-pill pill-year">2024</span>
+
+                            <!-- Subtle decorative watermark circles as seen in Figma design -->
+                            <div class="banner-circle circle-tl"></div>
+                            <div class="banner-circle circle-br"></div>
+
+                            <div class="project-3d-graphic">
+                                <img src="assets/project-erp.jpg" alt="Business Management System 3D Chart"
+                                    loading="lazy">
+                            </div>
+                        </div>
+
+                        <div class="project-card-body">
+                            <h3 class="project-card-title">Business Management System</h3>
+                            <p class="project-card-desc">
+                                A comprehensive ERP solution integrating HR, finance, inventory, and operations into a
+                                single unified
+                                platform for mid-size enterprises.
+                            </p>
+
+                            <div class="project-tech-tags">
+                                <span class="tech-tag">React</span>
+                                <span class="tech-tag">Node.js</span>
+                                <span class="tech-tag">PostgreSQL</span>
+                                <span class="tech-tag">Docker</span>
+                            </div>
+
+                            <button type="button" class="btn-project-dark open-project-modal" data-target-modal="erp">
+                                View Project
+                            </button>
+                        </div>
+                    </article>
+
+                    <!-- Project 2: E-Commerce Platform (Web) -->
+                    <article class="project-card" data-category="web" data-project-id="ecommerce">
+                        <div class="project-card-banner banner-purple">
+                            <span class="banner-pill pill-category">Web</span>
+                            <span class="banner-pill pill-year">2024</span>
+
+                            <div class="banner-circle circle-tl"></div>
+                            <div class="banner-circle circle-br"></div>
+
+                            <div class="project-3d-graphic">
+                                <img src="assets/project-cart.jpg" alt="E-Commerce Platform 3D Shopping Cart"
+                                    loading="lazy">
+                            </div>
+                        </div>
+
+                        <div class="project-card-body">
+                            <h3 class="project-card-title">E-Commerce Platform</h3>
+                            <p class="project-card-desc">
+                                A scalable multi-vendor marketplace with product management, Stripe payment processing,
+                                order tracking,
+                                and real-time analytics.
+                            </p>
+
+                            <div class="project-tech-tags">
+                                <span class="tech-tag">Next.js</span>
+                                <span class="tech-tag">Stripe</span>
+                                <span class="tech-tag">MongoDB</span>
+                                <span class="tech-tag">Redis</span>
+                            </div>
+
+                            <button type="button" class="btn-project-dark open-project-modal"
+                                data-target-modal="ecommerce">
+                                View Project
+                            </button>
+                        </div>
+                    </article>
+
+                    <!-- Project 3: Mobile Banking Application (Mobile) -->
+                    <article class="project-card" data-category="mobile" data-project-id="banking">
+                        <div class="project-card-banner banner-emerald">
+                            <span class="banner-pill pill-category">Mobile</span>
+                            <span class="banner-pill pill-year">2023</span>
+
+                            <div class="banner-circle circle-tl"></div>
+                            <div class="banner-circle circle-br"></div>
+
+                            <div class="project-3d-graphic">
+                                <img src="assets/project-bank.jpg" alt="Mobile Banking Application 3D Bank Building"
+                                    loading="lazy">
+                            </div>
+                        </div>
+
+                        <div class="project-card-body">
+                            <h3 class="project-card-title">Mobile Banking Application</h3>
+                            <p class="project-card-desc">
+                                A secure, intuitive mobile banking app with biometric authentication, real-time fund
+                                transfers, account
+                                statements, and financial dashboards.
+                            </p>
+
+                            <div class="project-tech-tags">
+                                <span class="tech-tag">React Native</span>
+                                <span class="tech-tag">TypeScript</span>
+                                <span class="tech-tag">AWS</span>
+                                <span class="tech-tag">Node.js</span>
+                            </div>
+
+                            <button type="button" class="btn-project-dark open-project-modal"
+                                data-target-modal="banking">
+                                View Project
+                            </button>
+                        </div>
+                    </article>
+
+                    <!-- Project 4: Enterprise AI Assistant & Copilot (AI) -->
+                    <article class="project-card" data-category="ai" data-project-id="ai-assistant">
+                        <div class="project-card-banner banner-cyber">
+                            <span class="banner-pill pill-category">AI</span>
+                            <span class="banner-pill pill-year">2024</span>
+
+                            <div class="banner-circle circle-tl"></div>
+                            <div class="banner-circle circle-br"></div>
+
+                            <div class="project-3d-graphic">
+                                <img src="assets/project-ai.jpg" alt="Enterprise AI Assistant Neural Brain"
+                                    loading="lazy">
+                            </div>
+                        </div>
+
+                        <div class="project-card-body">
+                            <h3 class="project-card-title">Enterprise AI Copilot</h3>
+                            <p class="project-card-desc">
+                                An intelligent multi-modal enterprise copilot featuring automated document intelligence,
+                                vector search
+                                indexing, and real-time natural language synthesis.
+                            </p>
+
+                            <div class="project-tech-tags">
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">FastAPI</span>
+                                <span class="tech-tag">OpenAI</span>
+                                <span class="tech-tag">Pinecone</span>
+                            </div>
+
+                            <button type="button" class="btn-project-dark open-project-modal"
+                                data-target-modal="ai-assistant">
+                                View Project
+                            </button>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ======================================================== -->
+        <!-- CONTACT SECTION                                          -->
+        <!-- ======================================================== -->
+        <section class="contact-section" id="contact">
+            <div class="section-container">
+
+                <!-- Header -->
+                <div class="section-header text-center">
+                    <span class="section-label">GET IN TOUCH</span>
+                    <h2 class="section-title">Let's Build Something Together</h2>
+                    <p class="section-subtitle">
+                        Have an idea or project in mind? Get in touch with the NBM BYTES team and let's start the
+                        conversation.
+                    </p>
+                </div>
+
+                <div class="contact-layout-grid">
+
+                    <!-- Left Column: Send Us a Message Card -->
+                    <div class="contact-form-card">
+                        <h3 class="form-card-title">Send Us a Message</h3>
+
+                        <form id="contactForm" class="contact-form" novalidate>
+                            <div class="form-row-2">
+                                <div class="form-group">
+                                    <label for="fullName">Full Name <span class="required">*</span></label>
+                                    <input type="text" id="fullName" name="fullName" placeholder="Your full name"
+                                        required>
+                                    <span class="field-error" id="nameError"></span>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="emailAddress">Email Address <span class="required">*</span></label>
+                                    <input type="email" id="emailAddress" name="emailAddress"
+                                        placeholder="you@example.com" required>
+                                    <span class="field-error" id="emailError"></span>
+                                </div>
+                            </div>
+
+                            <div class="form-row-2">
+                                <div class="form-group">
+                                    <label for="phoneNumber">Phone Number</label>
+                                    <input type="tel" id="phoneNumber" name="phoneNumber" placeholder="+977 9767022003">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="companyName">Company</label>
+                                    <input type="text" id="companyName" name="companyName"
+                                        placeholder="Your company name">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="serviceSelect">Service Required</label>
+                                <div class="custom-select-wrap">
+                                    <select id="serviceSelect" name="serviceRequired">
+                                        <option value="" selected>Select a service...</option>
+                                        <option value="Web Development">Web Development</option>
+                                        <option value="Mobile App Development">Mobile App Development</option>
+                                        <option value="Custom Software Development">Custom Software Development</option>
+                                        <option value="Enterprise AI Solutions">Enterprise AI Solutions</option>
+                                        <option value="Cloud & DevOps Engineering">Cloud &amp; DevOps Engineering
+                                        </option>
+                                        <option value="UI/UX Product Design">UI/UX Product Design</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="projectMessage">Message <span class="required">*</span></label>
+                                <textarea id="projectMessage" name="projectMessage" rows="5"
+                                    placeholder="Tell us about your project, goals, and timeline..."
+                                    required></textarea>
+                                <span class="field-error" id="messageError"></span>
+                            </div>
+
+                            <div class="form-actions">
+                                <button type="submit" class="btn-primary btn-submit-message" id="submitContactBtn">
+                                    <span class="btn-text">Send Message</span>
+                                    <span class="btn-spinner" aria-hidden="true"></span>
+                                </button>
+                            </div>
+
+                            <!-- Form Success/Alert Toast -->
+                            <div class="form-alert" id="formAlert" role="alert" style="display: none;"></div>
+                        </form>
+                    </div>
+
+                    <!-- Right Column: Info Cards & Interactive Map -->
+                    <div class="contact-info-col">
+
+                        <!-- Dark Navy Contact Information Card -->
+                        <div class="contact-info-card">
+                            <h3 class="info-card-title">Contact Information</h3>
+
+                            <div class="info-items-list">
+
+                                <div class="info-item">
+                                    <div class="info-icon-box">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white"
+                                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            <path
+                                                d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
+                                            </path>
+                                            <polyline points="22,6 12,13 2,6"></polyline>
+                                        </svg>
+                                    </div>
+                                    <div class="info-text">
+                                        <span class="info-label">Email</span>
+                                        <a href="mailto:nbmbytes@gmail.com" class="info-value">nbmbytes@gmail.com</a>
+                                    </div>
+                                </div>
+
+                                <div class="info-item">
+                                    <div class="info-icon-box">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white"
+                                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            <path
+                                                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                                            </path>
+                                        </svg>
+                                    </div>
+                                    <div class="info-text">
+                                        <span class="info-label">Phone</span>
+                                        <a href="tel:+9779767022003" class="info-value">+977 9767022003</a>
+                                    </div>
+                                </div>
+
+                                <div class="info-item">
+                                    <div class="info-icon-box">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white"
+                                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                            <circle cx="12" cy="10" r="3"></circle>
+                                        </svg>
+                                    </div>
+                                    <div class="info-text">
+                                        <span class="info-label">Location</span>
+                                        <span class="info-value">Janakinagar - Butwal, Rupandehi</span>
+                                    </div>
+                                </div>
+
+                                <div class="info-item">
+                                    <div class="info-icon-box">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white"
+                                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            <circle cx="12" cy="12" r="10"></circle>
+                                            <polyline points="12 6 12 12 16 14"></polyline>
+                                        </svg>
+                                    </div>
+                                    <div class="info-text">
+                                        <span class="info-label">Business Hours</span>
+                                        <span class="info-value">Sunday – Friday<br>9:00 AM – 5:00 PM</span>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <!-- Janakinagar - Butwal Location / Map Card -->
+                        <div class="location-map-card">
+                            <div class="map-visual-placeholder">
+                                <div class="map-grid-lines"></div>
+                                <div class="map-pin-pulse">
+                                    <div class="pin-icon-wrap">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
+                                            <path
+                                                d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 0 1 0-5 2.5 2.5 0 0 1 0 5z" />
+                                        </svg>
+                                    </div>
+                                    <div class="pulse-ring"></div>
+                                </div>
+                                <div class="map-label-bubble">
+                                    <strong>Janakinagar - Butwal, Rupandehi</strong>
+                                    <span>NBM BYTES Headquarters</span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ======================================================== -->
+    <!-- FOOTER                                                   -->
+    <!-- ======================================================== -->
+    <footer class="site-footer">
+        <div class="section-container">
+            <div class="footer-top-grid">
+
+                <!-- Company Info -->
+                <div class="footer-brand-col">
+                    <a href="#home" class="brand-logo footer-logo">
+                        <img src="assets/nbm-logo.png" alt="NBM BYTES Logo" class="brand-logo-img">
+                        <span class="brand-text">
+                            <span class="brand-white">NBM</span> <span class="brand-blue">BYTES</span>
+                        </span>
+                    </a>
+                    <p class="footer-about-text">
+                        NBM BYTES delivers dependable digital software, enterprise applications, and modern mobile
+                        platforms that
+                        empower businesses across Nepal and globally to operate smarter.
+                    </p>
+                    <div class="footer-time-badge" id="nepalClock">
+                        <span class="clock-icon">🇳🇵</span>
+                        <span>Nepal Time: <strong id="liveNepalTime">--:--:--</strong></span>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="footer-links-col">
+                    <h4 class="footer-heading">Quick Links</h4>
+                    <ul class="footer-nav">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#services">Our Services</a></li>
+                        <li><a href="#about">About Company</a></li>
+                        <li><a href="#team">Leadership Team</a></li>
+                        <li><a href="#projects">Project Portfolio</a></li>
+                        <li><a href="#contact">Get In Touch</a></li>
+                    </ul>
+                </div>
+
+                <!-- Services Links -->
+                <div class="footer-links-col">
+                    <h4 class="footer-heading">Solutions</h4>
+                    <ul class="footer-nav">
+                        <li><a href="#services">Web Applications</a></li>
+                        <li><a href="#services">iOS &amp; Android Apps</a></li>
+                        <li><a href="#services">Custom ERP &amp; CRM</a></li>
+                        <li><a href="#services">Cloud &amp; DevOps</a></li>
+                        <li><a href="#services">Enterprise AI &amp; LLMs</a></li>
+                        <li><a href="#services">UI/UX Design Systems</a></li>
+                    </ul>
+                </div>
+
+                <!-- Team & Presence -->
+                <div class="footer-links-col">
+                    <h4 class="footer-heading">Core Team</h4>
+                    <ul class="footer-team-list">
+                        <li><strong>Anish Neupane</strong> — Architecture</li>
+                        <li><strong>Sugal Darlami</strong> — Product &amp; UI</li>
+                        <li><strong>Sornim Narayan Shrestha</strong> — Mobile</li>
+                        <li><strong>Sudeep Tiwari</strong> — Cloud &amp; DevOps</li>
+                    </ul>
+                    <div class="footer-contact-mini">
+                        <span>📍 Janakinagar - Butwal, Rupandehi</span>
+                        <span>✉️ <a href="mailto:nbmbytes@gmail.com"
+                                style="color: inherit;">nbmbytes@gmail.com</a></span>
+                        <span>📞 <a href="tel:+9779767022003" style="color: inherit;">+977 9767022003</a></span>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Footer Bottom Bar -->
+            <div class="footer-bottom-bar">
+                <p class="copyright-text">
+                    &copy; 2026 <strong>NBM BYTES</strong>. All rights reserved. Crafted with precision in Janakinagar -
+                    Butwal,
+                    Rupandehi, Nepal.
+                </p>
+                <div class="footer-legal-links">
+                    <a href="#privacy">Privacy Policy</a>
+                    <span class="divider">•</span>
+                    <a href="#terms">Terms of Service</a>
+                    <span class="divider">•</span>
+                    <a href="#security">Security</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ======================================================== -->
+    <!-- PROJECT DETAILS MODAL                                    -->
+    <!-- ======================================================== -->
+    <div class="modal-backdrop" id="projectModal" aria-hidden="true" role="dialog" aria-modal="true">
+        <div class="modal-dialog">
+            <div class="modal-header">
+                <div class="modal-title-wrap">
+                    <span class="modal-category" id="modalCategory">Category</span>
+                    <h3 class="modal-title" id="modalTitle">Project Title</h3>
+                </div>
+                <button type="button" class="modal-close-btn" id="modalCloseBtn"
+                    aria-label="Close dialog">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="modal-image-preview">
+                    <img id="modalImage" src="" alt="Project Preview">
+                </div>
+                <div class="modal-content-details">
+                    <h4>Project Overview</h4>
+                    <p id="modalDescription">Detailed description...</p>
+
+                    <h4>Key Capabilities</h4>
+                    <ul class="modal-features-list" id="modalFeatures"></ul>
+
+                    <h4>Technology Stack</h4>
+                    <div class="modal-tech-stack" id="modalTechStack"></div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn-secondary" id="modalDismissBtn">Close</button>
+                <a href="#contact" class="btn-primary" id="modalInquireBtn">Inquire About Similar Solution</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sign In / Account Modal -->
+    <div class="modal-backdrop" id="authModal" aria-hidden="true" role="dialog" aria-modal="true">
+        <div class="modal-dialog auth-dialog">
+            <div class="modal-header">
+                <div class="modal-title-wrap">
+                    <span class="modal-category">Client Portal</span>
+                    <h3 class="modal-title" id="authModalTitle">Sign In to NBM BYTES</h3>
+                </div>
+                <button type="button" class="modal-close-btn" id="authModalCloseBtn" aria-label="Close">&times;</button>
+            </div>
+            <div class="modal-body auth-body">
+                <form id="authForm" class="auth-form"
+                    onsubmit="event.preventDefault(); alert('Authentication demo: Connected to NBM BYTES client portal!'); document.getElementById('authModal').classList.remove('active');">
+                    <div class="form-group">
+                        <label for="authEmail">Work Email</label>
+                        <input type="email" id="authEmail" placeholder="you@company.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="authPassword">Password</label>
+                        <input type="password" id="authPassword" placeholder="••••••••" required>
+                    </div>
+                    <button type="submit" class="btn-primary full-width" style="margin-top: 10px;">Continue to
+                        Dashboard</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

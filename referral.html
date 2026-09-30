@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit New Referral | NBM BYTES Partner Portal</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#eff6ff',
+                            100: '#dbeafe',
+                            200: '#bfdbfe',
+                            500: '#3b82f6',
+                            600: '#2563eb',
+                            700: '#1d4ed8',
+                            800: '#1e40af',
+                            900: '#1e3a8a',
+                        }
+                    },
+                    boxShadow: {
+                        'soft': '0 10px 30px -5px rgba(37, 99, 235, 0.08), 0 4px 12px -2px rgba(0, 0, 0, 0.03)',
+                        'card': '0 20px 40px -15px rgba(0, 0, 0, 0.07)',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #F8FAFC;
+        }
+    </style>
+</head>
+
+<body class="min-h-full text-slate-800 flex flex-col justify-between">
+
+    <!-- NAVIGATION HEADER -->
+    <header class="w-full bg-white/90 backdrop-blur-md sticky top-0 z-50 border-b border-slate-200/60">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Logo -->
+            <a href="dashboard.html" class="flex items-center space-x-3 group">
+                <div
+                    class="w-10 h-10 rounded-xl bg-gradient-to-tr from-brand-700 via-brand-600 to-brand-500 flex items-center justify-center text-white shadow-md shadow-brand-500/20">
+                    <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path
+                            d="M12 12c-2-2.5-4-4-6.5-4A4.5 4.5 0 0 0 1 12.5 4.5 4.5 0 0 0 5.5 17C8 17 10 14.5 12 12zm0 0c2 2.5 4 4 6.5 4a4.5 4.5 0 0 0 4.5-4.5A4.5 4.5 0 0 0 18.5 7C16 7 14 9.5 12 12z">
+                        </path>
+                        <circle cx="12" cy="12" r="1.5" fill="currentColor"></circle>
+                    </svg>
+                </div>
+                <span class="text-xl font-extrabold tracking-tight text-slate-900 leading-none">NBM <span
+                        class="text-brand-600">BYTES</span> <span
+                        class="text-xs px-2 py-0.5 rounded bg-brand-50 text-brand-600 font-semibold ml-1">Partner
+                        Portal</span></span>
+            </a>
+
+            <!-- Back to Dashboard Link -->
+            <div class="flex items-center space-x-4">
+                <a href="dashboard.html"
+                    class="px-4 py-2 text-xs font-semibold text-brand-600 bg-brand-50 hover:bg-brand-100 rounded-xl transition-colors flex items-center gap-1.5">
+                    <i class="fa-solid fa-arrow-left"></i> Back to Dashboard
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main class="flex-grow max-w-4xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-10">
+
+        <div class="bg-white rounded-3xl shadow-card border border-slate-100 p-6 sm:p-10">
+            <div class="mb-6 pb-6 border-b border-slate-100">
+                <span
+                    class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-brand-50 text-brand-600 border border-brand-100 mb-3">
+                    <span class="w-1.5 h-1.5 rounded-full bg-brand-600"></span>
+                    PARTNER PROGRAM
+                </span>
+                <h1 class="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">Submit a New Referral Lead
+                </h1>
+                <p class="text-sm text-slate-500 mt-1">Connect a client or business looking for custom software
+                    development, cloud infrastructure, or IT solutions, and earn your commission share.</p>
+            </div>
+
+            <form id="referral-form" onsubmit="handleReferralSubmit(event)" class="space-y-6">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <!-- Client / Company Name -->
+                    <div>
+                        <label for="client-name"
+                            class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">Client /
+                            Company Name</label>
+                        <div class="relative">
+                            <i class="fa-regular fa-building absolute left-3.5 top-3.5 text-slate-400 text-sm"></i>
+                            <input type="text" id="client-name" required placeholder="Acme Technologies Inc."
+                                class="w-full pl-10 pr-4 py-2.5 text-sm bg-slate-50 border border-slate-200 rounded-xl focus:bg-white focus:outline-none focus:ring-2 focus:ring-brand-500/20 focus:border-brand-600 transition-all">
+                        </div>
+                    </div>
+
+                    <!-- Contact Person -->
+                    <div>
+                        <label for="contact-person"
+                            class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">Contact Person
+                            Name</label>
+                        <div class="relative">
+                            <i class="fa-regular fa-user absolute left-3.5 top-3.5 text-slate-400 text-sm"></i>
+                            <input type="text" id="contact-person" required placeholder="John Smith (CTO)"
+                                class="w-full pl-10 pr-4 py-2.5 text-sm bg-slate-50 border border-slate-200 rounded-xl focus:bg-white focus:outline-none focus:ring-2 focus:ring-brand-500/20 focus:border-brand-600 transition-all">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <!-- Email Address -->
+                    <div>
+                        <label for="client-email"
+                            class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">Client Email
+                            Address</label>
+                        <div class="relative">
+                            <i class="fa-regular fa-envelope absolute left-3.5 top-3.5 text-slate-400 text-sm"></i>
+                            <input type="email" id="client-email" required placeholder="john@acmetech.com"
+                                class="w-full pl-10 pr-4 py-2.5 text-sm bg-slate-50 border border-slate-200 rounded-xl focus:bg-white focus:outline-none focus:ring-2 focus:ring-brand-500/20 focus:border-brand-600 transition-all">
+                        </div>
+                    </div>
+
+                    <!-- Project Type / Service Needed -->
+                    <div>
+                        <label for="service-type"
+                            class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">Service
+                            Required</label>
+                        <div class="relative">
+                            <i class="fa-solid fa-layer-group absolute left-3.5 top-3.5 text-slate-400 text-sm"></i>
+                            <select id="service-type" required
+                                class="w-full pl-10 pr-4 py-2.5 text-sm bg-slate-50 border border-slate-200 rounded-xl focus:bg-white focus:outline-none focus:ring-2 focus:ring-brand-500/20 focus:border-brand-600 transition-all text-slate-700">
+                                <option value="" disabled selected>Select a solution...</option>
+                                <option value="custom-web">Custom Web App Development</option>
+                                <option value="mobile-app">Mobile Application (iOS/Android)</option>
+                                <option value="cloud-devops">Cloud Infrastructure & DevOps</option>
+                                <option value="ai-integration">Enterprise AI Assistant Integration</option>
+                                <option value="ui-ux">UI/UX Design & Architecture Audit</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Scope / Description -->
+                <div>
+                    <label for="project-notes"
+                        class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">Project Scope &
+                        Notes</label>
+                    <textarea id="project-notes" rows="4"
+                        placeholder="Briefly describe what the client is looking to build, expected timeline, or budget..."
+                        class="w-full p-4 text-sm bg-slate-50 border border-slate-200 rounded-xl focus:bg-white focus:outline-none focus:ring-2 focus:ring-brand-500/20 focus:border-brand-600 transition-all"></textarea>
+                </div>
+
+                <!-- Submit Button -->
+                <div class="flex items-center justify-end gap-4 pt-4">
+                    <a href="dashboard.html"
+                        class="px-5 py-3 text-xs font-bold text-slate-600 hover:bg-slate-100 rounded-xl transition-colors">Cancel</a>
+                    <button type="submit"
+                        class="px-6 py-3 bg-brand-600 hover:bg-brand-700 text-white font-bold text-xs rounded-xl shadow-md shadow-brand-500/20 transition-all flex items-center gap-2">
+                        <span>Submit Lead</span>
+                        <i class="fa-solid fa-arrow-right text-xs"></i>
+                    </button>
+                </div>
+            </form>
+        </div>
+
+    </main>
+
+    <!-- Toast Notification Box -->
+    <div id="toast"
+        class="fixed bottom-6 right-6 hidden bg-slate-900 text-white text-xs sm:text-sm font-medium px-5 py-3 rounded-xl shadow-xl border border-slate-800 transition-all duration-300 z-50 flex items-center gap-2">
+        <i class="fa-solid fa-circle-check text-emerald-400"></i>
+        <span id="toast-message">Referral submitted successfully!</span>
+    </div>
+
+    <!-- Footer -->
+    <footer class="w-full bg-white border-t border-slate-200/60 py-6 text-center text-xs text-slate-500">
+        &copy; 2026 NBM BYTES. All rights reserved. Secure Partner Network.
+    </footer>
+
+    <!-- Script to handle submission and redirect back -->
+    <script>
+        async function handleReferralSubmit(event) {
+            event.preventDefault();
+
+            // 1. Get logged-in user's email from localStorage
+            const userEmail = localStorage.getItem('nbm_partner_email');
+            if (!userEmail) {
+                alert('Your session has expired. Please log in again.');
+                window.location.href = 'login.html';
+                return;
+            }
+
+            // 2. Gather form input values (make sure these IDs match your HTML input elements!)
+            // 2. Gather form input values (fixed IDs)
+            const formData = {
+                user_email: userEmail,
+                client_name: document.getElementById('client-name').value,       // Changed to match id="client-name"
+                contact_person: document.getElementById('contact-person').value, // Changed to match id="contact-person"
+                client_email: document.getElementById('client-email').value,     // Changed to match id="client-email"
+                service_type: document.getElementById('service-type').value,     // Changed to match id="service-type"
+                notes: document.getElementById('project-notes').value || ''      // Fixed: matches id="project-notes"
+            };
+
+            try {
+                // 3. Send data to backend API
+                const response = await fetch('http://localhost:3000/api/submit-referral', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(formData)
+                });
+
+                const data = await response.json();
+
+                if (response.ok && data.success) {
+                    alert('Referral submitted successfully!');
+                    // Redirect back to dashboard so they can see it in their table
+                    window.location.href = 'dashboard.html';
+                } else {
+                    alert(data.message || 'Failed to submit referral.');
+                }
+            } catch (error) {
+                console.error('Submission error:', error);
+                alert('Unable to connect to the server. Make sure your backend is running.');
+            }
+        }
+    </script>
+</body>
+
+</html>
