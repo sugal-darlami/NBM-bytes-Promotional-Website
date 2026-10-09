@@ -320,7 +320,7 @@
 
             // 2. Otherwise, handle normal partner login via backend API
             try {
-                const response = await fetch('https://nbm-bytes-promotional-website.onrender.com/api/signup', {
+                const response = await fetch('https://nbm-bytes-promotional-website.onrender.com/api/login', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({ email, password })
@@ -344,7 +344,7 @@
         // Google Sign-In Callback Handler
         async function handleGoogleLogin(response) {
             try {
-                const res = await fetch('https://nbm-bytes-promotional-website.onrender.com/api/signup', {
+                const res = await fetch('https://nbm-bytes-promotional-website.onrender.com/api/login', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({ token: response.credential })
