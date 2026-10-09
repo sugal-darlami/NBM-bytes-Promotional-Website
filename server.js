@@ -1,78 +1,4 @@
-// require('dotenv').config(); // Load environment variables from .env
 
-// const express = require('express');
-// const mysql = require('mysql2');
-// const bcrypt = require('bcrypt');
-// const cors = require('cors');
-// const bodyParser = require('body-parser');
-
-// const app = express();
-// app.use(cors());
-// app.use(bodyParser.json());
-
-// // Serve static assets (images, CSS, JS) so users can see them
-// app.use(express.static(__dirname));
-// app.use('/assets', express.static('assets'));
-
-// // Connect to Cloud MySQL Database
-// const db = mysql.createConnection({
-//   host: process.env.DB_HOST,
-//   port: process.env.DB_PORT || 11244,
-//   user: process.env.DB_USER,
-//   password: process.env.DB_PASS,
-//   database: process.env.DB_NAME,
-//   ssl: {
-//     rejectUnauthorized: false
-//   }
-// });
-
-// db.connect((err) => {
-//   if (err) {
-//     console.error('Database connection failed:', err);
-//     return;
-//   }
-//   console.log('Connected to Cloud MySQL Database successfully!');
-// });
-// require('dotenv').config(); // Load environment variables from .env
-
-// const express = require('express');
-// const mysql = require('mysql2');
-// const bcrypt = require('bcrypt');
-// const cors = require('cors');
-// const bodyParser = require('body-parser');
-
-// const app = express();
-// app.use(cors());
-// app.use(bodyParser.json());
-
-// // Serve static assets (images, CSS, JS) so users can see them
-// app.use(express.static(__dirname));
-// app.use('/assets', express.static('assets'));
-
-// // Connect to Cloud MySQL Database
-// const db = mysql.createConnection({
-//     host: process.env.DB_HOST,
-//     port: process.env.DB_PORT || 11244,
-//     user: process.env.DB_USER,
-//     password: process.env.DB_PASS,
-//     database: process.env.DB_NAME,
-//     ssl: {
-//         rejectUnauthorized: false
-//     }
-// });
-
-// db.connect((err) => {
-//     if (err) {
-//         console.error('Database connection failed:', err);
-//         return;
-//     }
-//     console.log('Connected to Cloud MySQL Database successfully!');
-// });
-
-// const PORT = process.env.PORT || 3000;
-// app.listen(PORT, () => {
-//     console.log(`Server running on http://localhost:${PORT}`);
-// });
 require('dotenv').config(); // Load environment variables from .env
 
 const express = require('express');
@@ -98,8 +24,7 @@ app.get('/', (req, res) => {
 });
 app.use('/assets', express.static('assets'));
 
-// Connect to Cloud MySQL Database
-const mysql = require('mysql2');
+
 
 const db = mysql.createPool({
     host: process.env.DB_HOST,
