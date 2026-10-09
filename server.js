@@ -90,12 +90,14 @@ app.use(express.static(__dirname));
 app.use('/assets', express.static('assets'));
 
 // Connect to Cloud MySQL Database
-const db = mysql.createConnection({
+const mysql = require('mysql2');
+
+const db = mysql.createPool({
     host: process.env.DB_HOST,
-    port: process.env.DB_PORT || 11244,
     user: process.env.DB_USER,
-    password: process.env.DB_PASS,
+    password: process.env.DB_PASSWORD,
     database: process.env.DB_NAME,
+    port: process.env.DB_PORT || 11244,
     ssl: {
         rejectUnauthorized: false
     }
