@@ -37,14 +37,14 @@ const db = mysql.createPool({
     }
 });
 
-db.connect((err) => {
+db.getConnection((err, connection) => {
     if (err) {
         console.error('Database connection failed:', err);
-        return;
+    } else {
+        console.log('Connected to MySQL Database!');
+        connection.release(); // Return connection back to pool
     }
-    console.log('Connected to Cloud MySQL Database successfully!');
 });
-
 // Signup Route
 app.post('/api/signup', async (req, res) => {
     const { fullname, email, password } = req.body;
