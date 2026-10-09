@@ -15,6 +15,9 @@
     <!-- FontAwesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
+    <!-- Google Identity Services Library -->
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+
     <script>
         tailwind.config = {
             theme: {
@@ -126,27 +129,17 @@
                     Enter your credentials to access your NBM BYTES dashboard and tools.
                 </p>
 
-                <!-- Social Login Buttons -->
-                <div class="grid grid-cols-2 gap-3 mb-6">
-                    <button type="button"
-                        class="flex items-center justify-center gap-2 px-4 py-2.5 border border-slate-200 rounded-xl text-xs sm:text-sm font-semibold text-slate-700 hover:bg-slate-50 transition-colors">
-                        <svg class="w-4 h-4" viewBox="0 0 24 24">
-                            <path fill="#4285F4"
-                                d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" />
-                            <path fill="#34A853"
-                                d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" />
-                            <path fill="#FBBC05"
-                                d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z" />
-                            <path fill="#EA4335"
-                                d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z" />
-                        </svg>
-                        Google
-                    </button>
-                    <button type="button"
-                        class="flex items-center justify-center gap-2 px-4 py-2.5 border border-slate-200 rounded-xl text-xs sm:text-sm font-semibold text-slate-700 hover:bg-slate-50 transition-colors">
-                        <i class="fa-brands fa-github text-slate-900 text-base"></i>
-                        GitHub
-                    </button>
+                <!-- Social Login Buttons Container -->
+                <div class="flex flex-col items-center justify-center gap-3 mb-6">
+                    <!-- Google Sign-In Setup -->
+                    <div id="g_id_onload"
+                        data-client_id="807575718528-9iv8qmmk07e7qbq4i1e93cj8u6fhv9n8.apps.googleusercontent.com"
+                        data-callback="handleGoogleLogin">
+                    </div>
+                    <div class="g_id_signin w-full flex justify-center" data-type="standard" data-size="large"
+                        data-theme="outline" data-text="sign_in_with" data-shape="rectangular"
+                        data-logo_alignment="left" data-width="320">
+                    </div>
                 </div>
 
                 <div class="relative flex items-center justify-center mb-6">
@@ -337,13 +330,37 @@
                 if (response.ok) {
                     localStorage.setItem('nbm_partner_email', data.partner.email);
                     localStorage.setItem('nbm_partner_name', data.partner.name);
-                    localStorage.removeItem('nbm_is_admin'); // Ensure admin flag is cleared for regular partners
+                    localStorage.removeItem('nbm_is_admin');
                     window.location.href = 'dashboard.html';
                 } else {
                     alert(data.error || 'Login failed. Please check your credentials.');
                 }
             } catch (err) {
                 console.error('Login error', err);
+                alert('Server connection error. Please try again.');
+            }
+        }
+
+        // Google Sign-In Callback Handler
+        async function handleGoogleLogin(response) {
+            try {
+                const res = await fetch('http://localhost:3000/api/google-login', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ token: response.credential })
+                });
+
+                const data = await res.json();
+                if (res.ok) {
+                    localStorage.setItem('nbm_partner_email', data.partner.email);
+                    localStorage.setItem('nbm_partner_name', data.partner.name);
+                    localStorage.removeItem('nbm_is_admin');
+                    window.location.href = 'dashboard.html';
+                } else {
+                    alert(data.error || 'Google Sign-In failed.');
+                }
+            } catch (err) {
+                console.error('Google Sign-In Error:', err);
                 alert('Server connection error. Please try again.');
             }
         }
