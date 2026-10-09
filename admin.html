@@ -189,7 +189,7 @@
     <script>
         async function loadAdminData() {
             try {
-                const response = await fetch('http://localhost:3000/api/admin/referrals');
+                const response = await fetch(`/api/my-referrals?email=${encodeURIComponent(userEmail)}`);
                 const data = await response.json();
 
                 if (response.ok) {
