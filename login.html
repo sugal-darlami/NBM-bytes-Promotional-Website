@@ -344,7 +344,7 @@
         // Google Sign-In Callback Handler
         async function handleGoogleLogin(response) {
             try {
-                const res = await fetch('http://localhost:3000/api/google-login', {
+                const res = await fetch('https://nbm-bytes-promotional-website.onrender.com/api/signup', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({ token: response.credential })
