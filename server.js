@@ -218,6 +218,65 @@ app.patch('/api/admin/referrals/:id/status', (req, res) => {
         res.status(200).json({ message: 'Referral status updated successfully.' });
     });
 });
+// Add this in server.js (replace any existing app.post('/api/login', ...) endpoint)
+
+app.post('/api/login', async (req, res) => {
+    try {
+        const { email, password, token } = req.body;
+
+        // 1. GOOGLE SIGN-IN FLOW (Token present)
+        if (token) {
+            const userEmail = email; // Received from frontend decoding or body
+
+            if (!userEmail) {
+                return res.status(400).json({ error: 'Email missing from Google credentials' });
+            }
+
+            const [rows] = await db.query('SELECT * FROM users WHERE email = ?', [userEmail]);
+
+            if (rows.length === 0) {
+                return res.status(400).json({ error: 'No account found for this Google user. Please sign up first.' });
+            }
+
+            const user = rows[0];
+            return res.json({
+                message: 'Google login successful',
+                partner: {
+                    email: user.email,
+                    name: user.name || user.username
+                }
+            });
+        }
+
+        // 2. STANDARD EMAIL/PASSWORD FLOW
+        if (!email || !password) {
+            return res.status(400).json({ error: 'Email and password are required' });
+        }
+
+        const [rows] = await db.query('SELECT * FROM users WHERE email = ?', [email]);
+        if (rows.length === 0) {
+            return res.status(400).json({ error: 'Invalid login credentials' });
+        }
+
+        const user = rows[0];
+        const isMatch = await bcrypt.compare(password, user.password);
+        if (!isMatch) {
+            return res.status(400).json({ error: 'Invalid login credentials' });
+        }
+
+        return res.json({
+            message: 'Login successful',
+            partner: {
+                email: user.email,
+                name: user.name || user.username
+            }
+        });
+
+    } catch (err) {
+        console.error('Login error:', err);
+        return res.status(500).json({ error: 'Internal server error' });
+    }
+});
 // Start Server
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {

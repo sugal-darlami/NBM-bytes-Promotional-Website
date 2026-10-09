@@ -222,7 +222,7 @@
 
             try {
                 // 3. Send data to backend API
-                const response = await fetch('http://localhost:3000/api/submit-referral', {
+                const response = await fetch('/api/submit-referral', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify(formData)

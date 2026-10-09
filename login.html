@@ -344,24 +344,39 @@
         // Google Sign-In Callback Handler
         async function handleGoogleLogin(response) {
             try {
-                const res = await fetch('https://nbm-bytes-promotional-website.onrender.com/api/login', {
+                // 1. Decode Google JWT token to extract the email
+                const base64Url = response.credential.split('.')[1];
+                const base64 = base64Url.replace(/-/g, '+').replace(/_/g, '/');
+                const jsonPayload = decodeURIComponent(
+                    atob(base64)
+                        .split('')
+                        .map(c => '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2))
+                        .join('')
+                );
+                const googleUser = JSON.parse(jsonPayload);
+
+                // 2. Send both token and extracted email
+                const res = await fetch('/api/login', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({ token: response.credential })
+                    body: JSON.stringify({
+                        token: response.credential,
+                        email: googleUser.email // 👈 Passing email resolves the backend check
+                    })
                 });
 
                 const data = await res.json();
+
                 if (res.ok) {
                     localStorage.setItem('nbm_partner_email', data.partner.email);
                     localStorage.setItem('nbm_partner_name', data.partner.name);
-                    localStorage.removeItem('nbm_is_admin');
                     window.location.href = 'dashboard.html';
                 } else {
-                    alert(data.error || 'Google Sign-In failed.');
+                    alert(data.error || 'Google login failed.');
                 }
             } catch (err) {
                 console.error('Google Sign-In Error:', err);
-                alert('Server connection error. Please try again.');
+                alert('Google Sign-In failed. Please try again.');
             }
         }
 
