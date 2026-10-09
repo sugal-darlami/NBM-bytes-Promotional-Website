@@ -76,6 +76,7 @@
 require('dotenv').config(); // Load environment variables from .env
 
 const express = require('express');
+const path = require('path');
 const mysql = require('mysql2');
 const bcrypt = require('bcrypt');
 const cors = require('cors');
@@ -87,6 +88,9 @@ app.use(bodyParser.json());
 
 // Serve static assets (images, CSS, JS)
 app.use(express.static(__dirname));
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, 'createaccount.html'));
+});
 app.use('/assets', express.static('assets'));
 
 // Connect to Cloud MySQL Database

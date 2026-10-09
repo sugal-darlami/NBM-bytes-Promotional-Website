@@ -138,7 +138,7 @@
                 <!-- Social Login Buttons -->
                 <div class="flex flex-col items-center justify-center gap-3 mb-6">
                     <div id="g_id_onload"
-                        data-client_id="807575718528-9iv8qmmk07e7qbq4i1e93cj8u6fhv9n8.apps.googleusercontent.com"
+                        data-client_id="412210611561-etmltklo139lpl4h7629vvgmbns38rfk.apps.googleusercontent.com"
                         data-callback="handleGoogleLogin">
                     </div>
                     <div class="g_id_signin w-full flex justify-center" data-type="standard" data-size="large"
@@ -486,7 +486,7 @@
             const password = document.getElementById('password').value;
 
             try {
-                const response = await fetch('http://localhost:3000/api/signup', {
+                const response = await fetch('https://nbm-bytes-promotional-website.onrender.com/api/signup', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({ fullname, email, password })
