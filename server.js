@@ -83,7 +83,12 @@ const cors = require('cors');
 const bodyParser = require('body-parser');
 
 const app = express();
-app.use(cors());
+app.use(cors({
+    origin: '*', // Allows all origins to eliminate CORS issues
+    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+    allowedHeaders: ['Content-Type', 'Authorization']
+}));
+app.options('*', cors());
 app.use(bodyParser.json());
 
 // Serve static assets (images, CSS, JS)
